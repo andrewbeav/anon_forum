@@ -5,6 +5,8 @@ var mongoose = require('mongoose');
 
 // Setting up express
 var app = express();
+
+app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 
 mongoose.connect('mongodb://localhost/anon_forum', { 
